@@ -1,0 +1,20 @@
+.outter-container {
+  display: grid;
+  grid-template-columns: 20%, 20%, 20%, 20%, 20%;
+  grid-template-rows: 25%, 25%, 25%, 25%;
+}
+
+body {
+  background-color: blue;
+}
+
+#page-wrapper{
+  height: 1080;
+  width: 1920;
+}
+
+header{
+  background-color: antiquewhite;
+  height: 1000 px;
+
+}
