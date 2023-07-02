@@ -56,7 +56,7 @@ imageIndexes.forEach((i) => {
   
 //   //does this suffice for a different id for every image?
 
-//   image.addEventListener('click' , () => {
+//   image.addEventListener('click' , () => {g
 //     // not sure yet
 //   })
 //   matches.appendChild(imageMatch);
