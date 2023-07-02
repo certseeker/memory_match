@@ -1,18 +1,21 @@
-const memMatchBox = document.getElementById('mem-match-box');
 const frontCard = document.getElementById("front-card");
-const imageIndexes =[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+const memMatchBox = document.getElementById('mem-match-box');
+const matches = document.getElementById('matches');
 const coverImageIndexes =[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+const imageIndexes =[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+// const imageIndexesMatch=[11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
 const selectedIndex = null;
  
-
+//I am still haveing a hard time vewing the cover, even though I put it in using the same method of the card backs. 
 coverImageIndexes.forEach((i) => {
-  const coverImage = document.createElement('cover');
-  coverImage.setAttribute ("src" , `/background/circuit-board-background-copy-${i}.jpg`);
+  const coverImage = document.createElement('img');
+  coverImage.setAttribute ("src" , `./background/circuit-board-background-copy-${i}.jpg`);
   coverImage.style.width = "150px";
   coverImage.style.height = '150px';
   coverImage.classList.add('cover');
-  coverImage.setAttribute("id" , `cover ${i}`);
+  coverImage.setAttribute("id" , `cover${i}`);
   frontCard.appendChild(coverImage);
+  
 });
 
 imageIndexes.forEach((i) => {
@@ -23,8 +26,14 @@ imageIndexes.forEach((i) => {
   image.style.width = "150px";
   image.style.height = '150px';
   image.classList.add('images');
-  image.setAttribute("id" , `${i}`);
   
+
+  //I successfully named one id a specific for the intiial cares and their matches m$[i>10]
+    if (i <= 10){
+      image.setAttribute("id" , `${i}`);
+    } else {
+      image.setAttribute("id", `m${i}`);
+    }
   //does this suffice for a different id for every image?
 
   image.addEventListener('click' , () => {
@@ -33,7 +42,48 @@ imageIndexes.forEach((i) => {
   memMatchBox.appendChild(image);
 });
 
+//Trying to do the same method for the images from 11-20 DID not at ALL
+//matches 
+// imageIndexesMatch.forEach((i) => {
+//   const imageMatch = document.createElement('img');
 
+//   // chnage this to the card back
+//   image.setAttribute ("src" , `./images_match/memory-match-${i}.png`);
+//   image.style.width = "150px";
+//   image.style.height = '150px';
+//   image.classList.add('images-match');
+//   image.setAttribute("id" , `m${i}`);
+  
+//   //does this suffice for a different id for every image?
+
+//   image.addEventListener('click' , () => {
+//     // not sure yet
+//   })
+//   matches.appendChild(imageMatch);
+// });
+
+// const answers = [
+//   [1, 11],
+//   [2, 12],
+//   [3, 13],
+//   [4, 14],
+//   [5, 15],
+//   [6, 16],
+//   [7, 17],
+//   [8, 18],
+//   [9, 19],
+//   [10, 20]
+// ]
+
+// const id1 = get the id of the first one in here
+// const id2 = get the id of the second one in here
+
+// for (let i = 0; i < answers.length; i++) {
+//   if(answers[i].includes(id1) && answers[i].includes(id2)) {
+//       // make the cards stay flipped and increase score by 1
+//       break;
+//   }
+// }
 
 //div front
 

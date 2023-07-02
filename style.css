@@ -1,9 +1,14 @@
 header{
-  position:static;
+  position:relative;
   background-color: rgb(120, 97, 183);
-  height: 3000 px;
+  height: 100px;
+  width: 1200;
   
 }
+
+/* .cover {
+  z-index: initial;
+} */
 
 .outter-container {
   position:fixed;
@@ -21,15 +26,27 @@ header{
     display: grid;
     position: fixed;
     width: 900px;
+    /* height:auto; */
     grid-template-columns: [line1] 20% [line2] 20% [line3] 20% [line4] 20% [line5] 20%;
     grid-template-rows: [row1] 25% [row2] 25% 25% 25%;
     row-gap: 50px;
     column-gap: 50px;
     padding: 20px;
-    /* backface-visibility: visible; */
-    /* z-index: 1; */
+    backface-visibility: visible;
+    z-index: index 1;
   
   }
+
+  /* .images-match{
+    display: grid;
+    position: fixed;
+    width: 900px;
+    grid-template-columns: [line1] 20% [line2] 20% [line3] 20% [line4] 20% [line5] 20%;
+    grid-template-rows: [row1] 25% [row2] 25% 25% 25%;
+    row-gap: 50px;
+    column-gap: 50px;
+    padding: 20px;
+  } */
 
 
 #mem-match-box {
@@ -42,15 +59,20 @@ header{
   column-gap: 50px;
   padding: 20px;
   backface-visibility: hidden;
-  /* z-index:2; */
+  z-index: 2;
 
 } 
 
+#white-layer{
+  width: 1200px;
+  height: 1000px;
+  background-color: bisque;
 
+}
 
 
 #page-wrapper{
-  height: 1080;
-  width: 1200;
+  height: 1080px;
+  width: 1200px;
 }
 
