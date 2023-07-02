@@ -6,7 +6,7 @@ const imageIndexes =[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 
 // const imageIndexesMatch=[11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
 const selectedIndex = null;
  
-//I am still haveing a hard time vewing the cover, even though I put it in using the same method of the card backs. 
+// I am still haveing a hard time vewing the cover, even though I put it in using the same method of the card backs. 
 coverImageIndexes.forEach((i) => {
   const coverImage = document.createElement('img');
   coverImage.setAttribute ("src" , `./background/circuit-board-background-copy-${i}.jpg`);
@@ -36,10 +36,10 @@ imageIndexes.forEach((i) => {
     }
   //does this suffice for a different id for every image?
 
-  image.addEventListener('click' , () => {
-    // not sure yet
-  })
-  memMatchBox.appendChild(image);
+  // image.addEventListener('click' , () => {
+  //   // not sure yet
+  // })
+  matches.appendChild(image);
 });
 
 //Trying to do the same method for the images from 11-20 DID not at ALL
@@ -102,3 +102,4 @@ imageIndexes.forEach((i) => {
 
 
 // // })
+// just

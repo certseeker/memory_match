@@ -26,7 +26,7 @@ header{
     display: grid;
     position: fixed;
     width: 900px;
-    /* height:auto; */
+    height:790;
     grid-template-columns: [line1] 20% [line2] 20% [line3] 20% [line4] 20% [line5] 20%;
     grid-template-rows: [row1] 25% [row2] 25% 25% 25%;
     row-gap: 50px;
@@ -37,7 +37,7 @@ header{
   
   }
 
-  /* .images-match{
+  #matches{
     display: grid;
     position: fixed;
     width: 900px;
@@ -46,13 +46,34 @@ header{
     row-gap: 50px;
     column-gap: 50px;
     padding: 20px;
-  } */
+    z-index: 3;
+  }
 
 
 #mem-match-box {
   display: grid;
   position: fixed;
   width: 900px;
+  height: 790px;
+  grid-template-columns: [line1] 20% [line2] 20% [line3] 20% [line4] 20% [line5] 20%;
+  grid-template-rows: [row1] 25% [row2] 25% 25% 25%;
+  row-gap: 50px;
+  column-gap: 50px;
+  padding: 20px;
+  backface-visibility: hidden;
+  z-index: 3;
+
+} 
+
+img{
+  border-radius: 20px;
+}
+
+#white-layer{
+  display: grid;
+  position: fixed;
+  width: 900px;
+  height: 790px;
   grid-template-columns: [line1] 20% [line2] 20% [line3] 20% [line4] 20% [line5] 20%;
   grid-template-rows: [row1] 25% [row2] 25% 25% 25%;
   row-gap: 50px;
@@ -60,13 +81,9 @@ header{
   padding: 20px;
   backface-visibility: hidden;
   z-index: 2;
-
-} 
-
-#white-layer{
-  width: 1200px;
-  height: 1000px;
-  background-color: bisque;
+  /* width: 1200px;
+  height: 1000px; */
+  color: bisque;
 
 }
 

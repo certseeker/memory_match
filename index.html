@@ -16,8 +16,8 @@
   <div id="page-wrapper">
     <!-- <div class="cover"></div> -->
     <div id="front-card"></div>
-      <div id="white-layer"></div>
         <div id="mem-match-box"></div>
+        <div id="white-layer"></div>
         <div id="matches"></div>
   </div>
   <script src="app.js"></script>
@@ -25,7 +25,24 @@
 
 </html>
 
+<!-- where I left off July 2, 2am:
 
+I am trying to figure out how to keep the front card shown without
+seeing the back of the card. I placed a while layer div, but 
+when i use that, it paints over the entire back of the card, but shows the front. 
+when it is not activated, the back of the cared shines through and on 
+the images that have transparency, you can see a bit of the cover. 
+A definate issue. I thought one solution would be to place the inside of the grids
+inbwetween the card in the same shape, as if this were layers in an adobe program. 
+But that is not seeming to work since there may not be a property to select the inside 
+elements of the grid in css. But perhaps I can find a way to do this in js (elect the inside of the 
+grid to display. Unfortunately, the only soultion I can think of is make a certain 
+color image with the same dimentions of the cards and insert and iterate through each image
+like I did for the front and the back of the cards. I could also try to put both the back fo the cards in an setirly sepaerate div, and possibly
+adjust the settings. But since the other images are inserted through JS, its porbably best to do the same in terms of formatting. I cN 
+look up the original image dimentions and make an image in photoshop to layer them 
+in between the front and back of the cards. When I am flipping the cards though, I will ahev to make both layer vanish, which may 
+be a challenge logistically. However, if I do that for one layer, I should be able to do that for 2 -->
 
  <!-- <div> class= "grid-item" 1 </div>
 //     <div> class= "grid-item" 2 </div>
