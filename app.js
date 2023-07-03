@@ -1,8 +1,10 @@
 const frontCard = document.getElementById("front-card");
-const memMatchBox = document.getElementById('mem-match-box');
+// const memMatchBox = document.getElementById('mem-match-box');
 const matches = document.getElementById('matches');
-const coverImageIndexes =[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+const whiteLayer = document.getElementById('white-layer');
+const coverImageIndexes =[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
 const imageIndexes =[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+const whiteImageIndexes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
 // const imageIndexesMatch=[11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
 const selectedIndex = null;
  
@@ -18,6 +20,16 @@ coverImageIndexes.forEach((i) => {
   
 });
 
+for(let i = 0; i <= whiteImageIndexes.length; i++){
+  const whiteImage = document.createElement("img");
+  whiteImage.setAttribute (`src , ./cream_color_img/middle_portion_mem_match_${i}.jpg`);
+  whiteImage.style.width = '150px';
+  whiteImage.style.height = '150px';
+  whiteImage.classList.add('white-background');
+  whiteImage.setAttribute('id' , `white-layer${i}`);
+  whiteImage.appendChild('whiteLayer');
+};
+
 imageIndexes.forEach((i) => {
   const image = document.createElement('img');
 
@@ -31,8 +43,10 @@ imageIndexes.forEach((i) => {
   //I successfully named one id a specific for the intiial cares and their matches m$[i>10]
     if (i <= 10){
       image.setAttribute("id" , `${i}`);
+      image.setAttribute("name", "set1");
     } else {
       image.setAttribute("id", `m${i}`);
+      image.setAttribute("name", "set2");
     }
   //does this suffice for a different id for every image?
 
@@ -41,26 +55,6 @@ imageIndexes.forEach((i) => {
   // })
   matches.appendChild(image);
 });
-
-//Trying to do the same method for the images from 11-20 DID not at ALL
-//matches 
-// imageIndexesMatch.forEach((i) => {
-//   const imageMatch = document.createElement('img');
-
-//   // chnage this to the card back
-//   image.setAttribute ("src" , `./images_match/memory-match-${i}.png`);
-//   image.style.width = "150px";
-//   image.style.height = '150px';
-//   image.classList.add('images-match');
-//   image.setAttribute("id" , `m${i}`);
-  
-//   //does this suffice for a different id for every image?
-
-//   image.addEventListener('click' , () => {g
-//     // not sure yet
-//   })
-//   matches.appendChild(imageMatch);
-// });
 
 // const answers = [
 //   [1, 11],
@@ -103,3 +97,23 @@ imageIndexes.forEach((i) => {
 
 // // })
 // just
+
+//Trying to do the same method for the images from 11-20 DID not at ALL
+//matches 
+// imageIndexesMatch.forEach((i) => {
+//   const imageMatch = document.createElement('img');
+
+//   // chnage this to the card back
+//   image.setAttribute ("src" , `./images_match/memory-match-${i}.png`);
+//   image.style.width = "150px";
+//   image.style.height = '150px';
+//   image.classList.add('images-match');
+//   image.setAttribute("id" , `m${i}`);
+  
+//   //does this suffice for a different id for every image?
+
+//   image.addEventListener('click' , () => {g
+//     // not sure yet
+//   })
+//   matches.appendChild(imageMatch);
+// });
