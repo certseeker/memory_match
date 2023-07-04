@@ -1,13 +1,15 @@
 const frontCard = document.getElementById("front-card");
-// const memMatchBox = document.getElementById('mem-match-box');
+const transBase = document.getElementById('transparent-base');
 const matches = document.getElementById('matches');
 const whiteLayer = document.getElementById('white-layer');
 const coverImageIndexes =[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
 const imageIndexes =[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
 const whiteImageIndexes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+// const memMatchBox = document.getElementById('mem-match-box');
 // const imageIndexesMatch=[11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
 const selectedIndex = null;
  
+//I will have to hide this layer and the one underneath to reveal the correct background
 // I am still haveing a hard time vewing the cover, even though I put it in using the same method of the card backs. 
 coverImageIndexes.forEach((i) => {
   const coverImage = document.createElement('img');
@@ -17,27 +19,29 @@ coverImageIndexes.forEach((i) => {
   coverImage.classList.add('cover');
   coverImage.setAttribute("id" , `cover${i}`);
   frontCard.appendChild(coverImage);
-  
-});
 
-for(let i = 0; i <= whiteImageIndexes.length; i++){
-  const whiteImage = document.createElement("img");
-  whiteImage.setAttribute (`src , ./cream_color_img/middle_portion_mem_match_${i}.jpg`);
-  whiteImage.style.width = '150px';
-  whiteImage.style.height = '150px';
-  whiteImage.classList.add('white-background');
-  whiteImage.setAttribute('id' , `white-layer${i}`);
-  whiteImage.appendChild('whiteLayer');
-};
+    const topOfCard = document.getElementById(`cover${i}`);
+
+    topOfCard.addEventListener('click' , flipCard);
+      function flipCard(){
+        coverImage.classList.toggle("flipCard");
+        topOfCard.style.visibility = "hidden";
+        matches.style.visibility = "visible";
+        // topOfCard.style.display = "none";
+      }
+      
+  });
+  
+
 
 imageIndexes.forEach((i) => {
   const image = document.createElement('img');
 
   // chnage this to the card back
-  image.setAttribute ("src" , `./images/memory-match-${i}.png`);
+  image.setAttribute ("src" , `images/memory-match-${i}.png`);
   image.style.width = "150px";
   image.style.height = '150px';
-  image.classList.add('images');
+  image.classList.add('back-card');
   
 
   //I successfully named one id a specific for the intiial cares and their matches m$[i>10]
@@ -56,28 +60,70 @@ imageIndexes.forEach((i) => {
   matches.appendChild(image);
 });
 
-// const answers = [
-//   [1, 11],
-//   [2, 12],
-//   [3, 13],
-//   [4, 14],
-//   [5, 15],
-//   [6, 16],
-//   [7, 17],
-//   [8, 18],
-//   [9, 19],
-//   [10, 20]
-// ]
+const answers = [
+  [1, 11],
+  [2, 12],
+  [3, 13],
+  [4, 14],
+  [5, 15],
+  [6, 16],
+  [7, 17],
+  [8, 18],
+  [9, 19],
+  [10, 20]
+]
 
-// const id1 = get the id of the first one in here
-// const id2 = get the id of the second one in here
+const set1 = document.getElementsByName("set1");
+const set2 = document.getElementsByName('set2');
 
 // for (let i = 0; i < answers.length; i++) {
-//   if(answers[i].includes(id1) && answers[i].includes(id2)) {
-//       // make the cards stay flipped and increase score by 1
-//       break;
+//   if(answers[i].includes(set1) && answers[i].includes(set2)) {
+// //       // make the cards stay flipped and increase score by 1
+// //       break;
 //   }
 // }
+
+
+
+//*******Thank goodness I didnt need these "white background" layers Trying to figure that out was a pain!*/
+
+// });
+
+// I will have to hide this layer and the layer above to reveal the correct background
+// whiteImageIndexes.forEach((i) => {
+//   const whiteImage = document.createElement("img");
+//   whiteImage.setAttribute ('src' , `./cream_color_img/middle_portion_mem_match_${i}.jpg`);
+//   whiteImage.style.width = '150px';
+//   whiteImage.style.height = '150px';
+//   whiteImage.classList.add('white-background');
+//   whiteImage.setAttribute('id' , `white-layer${i}`);
+//   whiteLayer.appendChild('whiteImage');
+
+//   const secondTopOfCard = document.getElementById(`white-layer${i}`);
+
+//   secondTopOfCard.addEventListener('click' , flipCard);
+//       function flipCard(){
+//         whiteImage.classList.toggle("flipCard");
+//         // secondTopOfCard.style.visibility = "hidden";
+//       }
+// });
+
+
+
+//this is the base for the transparent images 
+// for(let i = 0; i <= whiteImageIndexes.length; i++){
+//   const transBase = document.createElement("img");
+//   whiteImage.setAttribute (`src , ./cream_color_img/middle_portion_mem_match_${i}.jpg`);
+//   whiteImage.style.width = '150px';
+//   whiteImage.style.height = '150px';
+//   whiteImage.classList.add('base');
+//   whiteImage.setAttribute('id' , `base${i}`);
+//   whiteImage.appendChild('transparent-base');
+// };
+
+//score: for each match, you get 1 point. if you get 10 matches, find all the matches,
+//then you win and all the cards are reshuffled and flipped back over aftr slecting a reset button 
+
 
 //div front
 
@@ -116,4 +162,4 @@ imageIndexes.forEach((i) => {
 //     // not sure yet
 //   })
 //   matches.appendChild(imageMatch);
-// });
+// })

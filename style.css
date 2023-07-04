@@ -11,7 +11,7 @@ header{
 } */
 
 .outter-container {
-  position:fixed;
+  /* position:fixed; */
   height: 1000px;
   
   
@@ -28,14 +28,69 @@ header{
     /* width: 900px;
     height:790; */
     grid-template-columns: [line1] 20% [line2] 20% [line3] 20% [line4] 20% [line5] 20%;
-    grid-template-rows: [row1] 25% [row2] 25% 25% 25%;
+    grid-template-rows: [row1] 25% [row2] 25% [row3] 25% [row4] 25%;
     row-gap: 20px;
     column-gap: 20px;
-    margin: 20px;
-    backface-visibility: visible;
-    z-index: index 1;
+    /* margin: 20px; */
+    backface-visibility: hidden;
+    z-index: index 2;
   
   }
+
+
+
+#matches {
+  display: grid;
+  position: fixed;
+  /* position: fixed; */
+  /* width: 900px; */
+  /* height: 750px;  */
+  grid-template-columns: [line1] 20% [line2] 20% [line3] 20% [line4] 20% [line5] 20%;
+  grid-template-rows: [row1] 25% [row2] 25% [row3] 25% [row4] 25%;
+  row-gap: 20px;
+  column-gap: 20px;
+  /* margin: 20px; */
+  /* backface-visibility: hidden; */
+  z-index: -3;
+
+} 
+
+img{
+  border-radius: 20px;
+}
+
+
+/* 
+.cover{
+  backface-visibility: hidden;
+} */
+
+/* .white-background{
+  backface-visibility: hidden;
+} */
+
+#page-wrapper{
+  position: relative;
+  height: 1080px;
+  width: 1116px;
+  /* background-color: rgb(12, 150, 160); */
+}
+
+#bottom{
+  width: 1116px;
+  height: auto;
+  background-color: rgb(12, 150, 160);
+ 
+}
+
+.flipCard{
+  transform: rotateY(180deg);
+}
+#front-container{
+  background-color: white;
+}
+
+  
 
   /* #matches{
     display: grid;
@@ -48,50 +103,3 @@ header{
     /* padding: 20px; */
     /* z-index: 3;
   } */ 
-
-
-#matches {
-  display: grid;
-  position: fixed;
-  /* width: 900px;
-  height: 750px; */
-  grid-template-columns: [line1] 20% [line2] 20% [line3] 20% [line4] 20% [line5] 20%;
-  grid-template-rows: [row1] 25% [row2] 25% [row3] 25% [row4] 25%;
-  row-gap: 20px;
-  column-gap: 20px;
-  margin: 20px;
-  backface-visibility: hidden;
-  z-index: 3;
-
-} 
-
-img{
-  border-radius: 20px;
-}
-
-#white-layer{
-  display: grid;
-  position: fixed;
-  /* width: 900px;
-  height: 790px; */
-  grid-template-columns: [line1] 20% [line2] 20% [line3] 20% [line4] 20% [line5] 20%;
-  grid-template-rows: [row1] 25% [row2] 25% 25% 25%;
-  row-gap: 20px;
-  column-gap: 20px;
-  margin: 20px;
-  backface-visibility: hidden;
-  z-index: 2;
-  /* width: 1200px;
-  height: 1000px; */
-  /* accent-color: bisque; */
-
-}
-
-
-#page-wrapper{
-  position: fixed;
-  height: 1080px;
-  width: 1116px;
-}
-
-
