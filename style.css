@@ -65,9 +65,7 @@ img{
   backface-visibility: hidden;
 } */
 
-/* .white-background{
-  backface-visibility: hidden;
-} */
+
 
 #page-wrapper{
   position: relative;
@@ -86,11 +84,16 @@ img{
 .flipCard{
   transform: rotateY(180deg);
 }
+
 #front-container{
   background-color: white;
 }
 
   
+
+/* .white-background{
+  backface-visibility: hidden;
+} */
 
   /* #matches{
     display: grid;

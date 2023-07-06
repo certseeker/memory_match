@@ -11,6 +11,7 @@ const selectedIndex = null;
  
 //I will have to hide this layer and the one underneath to reveal the correct background
 // I am still haveing a hard time vewing the cover, even though I put it in using the same method of the card backs. 
+
 coverImageIndexes.forEach((i) => {
   const coverImage = document.createElement('img');
   coverImage.setAttribute ("src" , `./background/circuit-board-background-copy-${i}.jpg`);
@@ -32,8 +33,8 @@ coverImageIndexes.forEach((i) => {
       
   });
   
-
-
+//put all the images inside a funciton in order to manipulate data
+  const getData = () => [
 imageIndexes.forEach((i) => {
   const image = document.createElement('img');
 
@@ -42,6 +43,7 @@ imageIndexes.forEach((i) => {
   image.style.width = "150px";
   image.style.height = '150px';
   image.classList.add('back-card');
+ 
   
 
   //I successfully named one id a specific for the intiial cares and their matches m$[i>10]
@@ -51,37 +53,90 @@ imageIndexes.forEach((i) => {
     } else {
       image.setAttribute("id", `m${i}`);
       image.setAttribute("name", "set2");
-    }
+    };
+
+      
+    // }
   //does this suffice for a different id for every image?
 
   // image.addEventListener('click' , () => {
   //   // not sure yet
   // })
   matches.appendChild(image);
-});
+ 
+})];
 
-const answers = [
-  [1, 11],
-  [2, 12],
-  [3, 13],
-  [4, 14],
-  [5, 15],
-  [6, 16],
-  [7, 17],
-  [8, 18],
-  [9, 19],
-  [10, 20]
-]
+// getData();
 
-const set1 = document.getElementsByName("set1");
-const set2 = document.getElementsByName('set2');
+// function randomize(array) {
+// for (let i = imageIndexes.length - 1; i > 0; i --){
+//   let j = Math.floor(Math.random() * (i + 1));
+//   [array[i], array[j]] = [array[j], array[i]];
+// }
+
+// return array;
+
+// };
+
+// randomize(imageIndexes);
+const randomize = (array) => {
+array.sort(() => Math.random() - 0.5);
+return array;
+}; 
+
+
+const cardData = getData();
+
+randomize(getData());
+
+// if the iteration of i from set 1 and set 2 are equal, then the cards slected are a match
+
+// const set1 = document.getElementsByName("set1");
+// const set2 = document.getElementsByName('set2');
+
+// const theyMatch = []
+// let selectedCards = []
+
+
+
+//   for in set1 && set2, if the numbers m
+// if (i in set1 == i in set2){
+//   theyMatch.push(image.id);
+// }
+
+// console.log(theyMatch)
+
+// if the first number plus 10, equals the second number, then set 1 and set 2 are matches
+// if 2 cards are selected
+// if (`${i}` in set1 + 10 == `${i}` in set2){
+
+// }
+
+
+// const answers = [
+//   [1, 11], 
+//   [2, 12],
+//   [3, 13],
+//   [4, 14],
+//   [5, 15],
+//   [6, 16],
+//   [7, 17],
+//   [8, 18],
+//   [9, 19],
+//   [10, 20]
+// ]
+
+
 
 // for (let i = 0; i < answers.length; i++) {
 //   if(answers[i].includes(set1) && answers[i].includes(set2)) {
+
 // //       // make the cards stay flipped and increase score by 1
 // //       break;
 //   }
 // }
+
+
 
 
 

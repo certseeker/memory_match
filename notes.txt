@@ -1,37 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
+let imageList = []
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Memory Match</title>
-<header>
-  <div> 
-    <h1>Connect the Circuit Boards</h1>
-  </div>
-</header>
-<body>
-  <div id="page-wrapper">
-    <div id="front-card"></div>
-    <div id="matches"></div>
-  </div>
-  <script src="app.js"></script>
-</body>
-<footer>
-  <div id="bottom">
+let cardData = getData();
 
-  </div>
+imageList.push(getData)
 
-</footer>
+randomize(imageList);
 
-</html>
 
-        <!-- <div id="mem-match-box"></div> -->
-        <!-- <div id="transparent-base"></div> -->
-    <!-- <div id="white-layer"></div> -->
 
+July 6th:
+Tried to put random function outside of getData fucntion, but it did not work. There is an effect, but it just moves the pictures down and in certain spots behind the front cards.
+I do not understand why that is happenging, but that is the only afftect/ change I have noticed. This happens when I put the following outside of the data fucntion and I leave everthing 
+in the getData fucntion as is:
+
+const randomize = (array) => {
+array.sort(() => Math.random() - 0.5);
+return array;
+}; 
+
+
+const cardData = getData();
+
+randomize(getData());
+
+Tomarrow, I want to try to put a function in a fucntion using the getData arrow function. perhaps
+oustdie the brackets that holds the image data, I can put parenthseis and have a function that randomizes the pictures. If that does not work, I want to continue 
+on with the project and try to accomplish capturing the clicks in order to establish a match. 
 
 <!-- Finally figured out how to put the top layer on the top, and the bottom layer on the bottom z-index with a negatigive integer was the solution! ! now to work on the alogorithyms 
 and see what the best method would be to select images, maintian score, shuffle cards, and dertmine matches  -->
@@ -65,26 +59,3 @@ that has an m in it, matches with a numebered card, then leave them face up (wit
 then have a start alert, then have an you won alert.
 
 may also have to reposition columns so thhat cards fit evenky on the page.-->
-
-
-
- <!-- <div> class= "grid-item" 1 </div>
-//     <div> class= "grid-item" 2 </div>
-//     <div> class= "grid-item" 3 </div>
-//     <div> class= "grid-item" 4 </div>
-//     <div> class= "grid-item" 5 </div>
-//     <div> class= "grid-item" 6 </div>
-//     <div> class= "grid-item" 7 </div>
-//     <div> class= "grid-item" 8 </div>
-//     <div> class= "grid-item" 9 </div>
-//     <div> class= "grid-item" 10 </div>
-//     <div> class= "grid-item" 11 </div>
-//     <div> class= "grid-item" 12 </div>
-//     <div> class= "grid-item" 13 </div>
-//     <div> class= "grid-item" 14 </div>
-//     <div> class= "grid-item" 15 </div>
-//     <div> class= "grid-item" 16 </div>
-//     <div> class= "grid-item" 17 </div>
-//     <div> class= "grid-item" 18 </div>
-//     <div> class= "grid-item" 19 </div>
-//     <div> class= "grid-item" 20 </div> -
