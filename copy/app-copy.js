@@ -34,7 +34,6 @@ coverImageIndexes.forEach((i) => {
   });
   
 //put all the images inside a funciton in order to manipulate data
-
   const getData = () => [
 imageIndexes.forEach((i) => {
   const image = document.createElement('img');
@@ -51,72 +50,26 @@ imageIndexes.forEach((i) => {
     if (i <= 10){
       image.setAttribute("id" , `${i}`);
       image.setAttribute("name", "set1");
-    } else { 
-      image.setAttribute("id", `${i}`);
+    } else {
+      image.setAttribute("id", `m${i}`);
       image.setAttribute("name", "set2");
     };
 
-    let flippedcards = [];
-    let flippedCount = 0; 
+    const backCard = document.getElementsByClassName(".back-card");
 
-    const backCards = document.getElementsByClassName(".back-card");
 
-    //I am trying to get the computer to first hover over the image, and read the name of the image
-    //in order to read the name to see if the two items that were hover over after being revealed from the 
-    //first click is a match. 
 
-      //get id of element that is hovered over
-    const hoverOver = event => {
-      console.log(event.target.id);
-    };
-
-    //"cover" first initiated on line 20 from coverImage, in a different local range outside of get data. 
-    //Goal is to take the coverimage and flip back over coverImage near line 95 if it is not a match. 
-    const frontCardFlip = document.getElementsByClassName("cover");
-    //may not need this if spcifying card to be flipped over aroun line 95
-    const flipCoverBackOver = coverImage.classList.toggle("flipCard");
-
-    for (let card of backCards){
-    //or try onmouseover/mouseover, e is short for event
-    backCards.addEventListener('onmouseover' , event => {
-      //some things to do
-      //console.logs the id of the target/backCard
-      hoverOver;
-      console.log("test" , event);
-
-    });
- 
-    // function doTheyMatch(event){
-   
-      // if(clickedCard.tagName === 'img"') //or if topOfCard is clicked, but this says img, should I instead say backCard?
-      // if(hoverOver.classList.backCards) //may have this in the incorrect order, also, already called hover over in the for loop
-      if(backCards.classList){ //this may be redundant
-        if(i in set1 + 10 === i in set2 || i in set2 - 10 === i in set1){
-        alert("You found a match!");
-      } else {
-        alert("Sorry, try again");
-        function flipCardBackOver(){
-          coverImage.classList.toggle("flipCard");
-          topOfCard.style.visibility = "visible"; // hoping that this allows the front of the card to been seen again
-          matches.style.visibility = "hidden"; //hoping that thi allows the the matches part of the card to be hidden again
-          //flips card back over only once
-          {once, true }
-       };
-      }
-      };
-    }
- //   const mouseMoved = event.target;
     // }
   //does this suffice for a different id for every image?
 
-  
-  matches.appendChild(image);
-
-  // matches.addEventListener('click' , () => {
+  // image.addEventListener('click' , () => {
   //   // not sure yet
   // })
+  matches.appendChild(image);
 
-    //attempted to include the shuffle function within the getdata function
+  const set1 = document.getElementById("set1");
+  const set2 = document.getElementById("set2");
+
   // const randomize = () => {
   //   set1.sort(() => Math.random() - 0.5);
   //   return set1;
@@ -126,25 +79,7 @@ imageIndexes.forEach((i) => {
 })];
 
 
-const set1 = document.getElementById("set1");
-const set2 = document.getElementById("set2");
-
-// const answers = [
-//   ["1", set2, 11], 
-//   [set1, "2"],
-//   [3, 13],
-//   [4, 14],
-//   [5, 15],
-//   [6, 16],
-//   [7, 17],
-//   [8, 18],
-//   [9, 19],
-//   [10, 20]
-// ]
-
-
-
-// getData()
+const cardData = getData;
 
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -155,10 +90,9 @@ function shuffleArray(array) {
 }
 
 
-const randomizedCardData = shuffleArray(getData());
+const randomizedCardData = shuffleArray(getData);
 
-// matches.appendChild(set1);
-// matches.appendChild(set);
+matches.appendChild(image);
 
 // const cardData = getData;
 

@@ -8,9 +8,20 @@ randomize(imageList);
 
 
 
+July 8th:
+
+On the 7th, I struggled to impliment the shuffle fuction correctly around line 149. I will try to come back to that issue. 
+
+The 8th, I attempted to write code for the matching scheme in the get data fucntion. Researched prevent default 
+and found other techniques to flip card back over once to try to find the matching card. May have 
+the incorrect placement on syntax since these adjustments did not make an impact if there was a match or not. Nor did 
+it turn the card back over. Made an effort to write detailed code within the code for adjustmensts. Will try again tomarrow.
+
+
+
 July 6th:
 Tried to put random function outside of getData fucntion, but it did not work. There is an effect, but it just moves the pictures down and in certain spots behind the front cards.
-I do not understand why that is happenging, but that is the only afftect/ change I have noticed. This happens when I put the following outside of the data fucntion and I leave everthing 
+I do not understand why that is happening, but that is the only afftect/ change I have noticed. This happens when I put the following outside of the data fucntion and I leave everthing 
 in the getData fucntion as is:
 
 const randomize = (array) => {
@@ -24,8 +35,9 @@ const cardData = getData();
 randomize(getData());
 
 Tomarrow, I want to try to put a function in a fucntion using the getData arrow function. perhaps
-oustdie the brackets that holds the image data, I can put parenthseis and have a function that randomizes the pictures. If that does not work, I want to continue 
-on with the project and try to accomplish capturing the clicks in order to establish a match. 
+oustdie the brackets that holds the image data, I can put parenthseis and have a function that randomizes the pictures. I also want to try to 
+getElementById and see if i can select the images that wat, through set1 and 2 to see if I can go about randomizing the images that way. If that does not work, I want to continue 
+on with the project and try to accomplish capturing the clicks in order to establish a match. This way I am not stagnant on my progress. 
 
 <!-- Finally figured out how to put the top layer on the top, and the bottom layer on the bottom z-index with a negatigive integer was the solution! ! now to work on the alogorithyms 
 and see what the best method would be to select images, maintian score, shuffle cards, and dertmine matches  -->
